@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tetris Web</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header>
+        <h1>Tetris</h1>
+        <p class="subtitle">Classic block-stacking fun in your browser.</p>
+      </header>
+
+      <main class="game">
+        <section class="board">
+          <canvas id="tetris" width="300" height="600"></canvas>
+        </section>
+
+        <aside class="panel">
+          <div class="stats">
+            <div>
+              <span class="label">Score</span>
+              <span id="score">0</span>
+            </div>
+            <div>
+              <span class="label">Lines</span>
+              <span id="lines">0</span>
+            </div>
+            <div>
+              <span class="label">Level</span>
+              <span id="level">1</span>
+            </div>
+          </div>
+
+          <div class="preview">
+            <span class="label">Next</span>
+            <canvas id="next" width="120" height="120"></canvas>
+          </div>
+
+          <div class="controls">
+            <button id="start">Start</button>
+            <button id="pause">Pause</button>
+            <button id="reset">Reset</button>
+          </div>
+
+          <div class="instructions">
+            <h2>Controls</h2>
+            <ul>
+              <li><strong>←/→</strong> Move</li>
+              <li><strong>↑</strong> Rotate</li>
+              <li><strong>↓</strong> Soft drop</li>
+              <li><strong>Space</strong> Hard drop</li>
+              <li><strong>P</strong> Pause</li>
+            </ul>
+          </div>
+        </aside>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
